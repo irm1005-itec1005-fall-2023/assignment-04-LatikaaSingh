@@ -3,7 +3,7 @@
 
 <head>
   <!-- Set the page title -->
-  <title>Assignment 04 - Finishing a Todo List App</title>
+  <title>Todo List App</title>
 
   <!-- Set the charset we're using to UTF-8 -->
   <meta charset="utf-8" />
@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="./style.css" />
 
   <!-- Set the Favicon  -->
-  <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+  <link rel="icon" href="./images/favicon/favicon2.svg" type="image/svg+xml" />
 </head>
 <body>
 
@@ -42,6 +42,18 @@
 
   <main>
     <div id="app"></div>
+    <div class = "container"> <!-- a box has been created -->
+    <div class = "todolist-app"> 
+      <h2>
+        To-Do List <img src="images/todo list icon.JPG" width="59" height="59"> <!--adding the title and and icon-->
+      </h2>
+      <div class = "row">
+        <input type = "text" id="input-box" placeholder="enter todo item"> <!--takes the input-->
+        <button onclick="addToDoItem()">Add</button>
+      </div>
+      <ul id="list-container"> <!--list of all the tasks go here-->
+    </div>
+    </div>
   </main>
 
   <!-- Add JavaScript File -->
@@ -49,3 +61,4 @@
 
 </body>
 </html>
+<!--I used stock images from variours websites. I used W3School to understand concepts such as .target, .parentElement, .innerHTML. I also used the material provided to us by the professor.-->

@@ -6,27 +6,32 @@
 
 /*
  VARIABLES
-*/
+
 :root {
   /* Core colours */
   /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
+  /*
   --colour-amaranth: #e63946;
   --colour-peppermint: #f1faee;
   --colour-aquaisland: #a8dadc;
   --colour-wedgewood: #457b9d;
   --colour-cello: #1d3557;
-
+  */
+  /*
   /* Header configuration */
+  /*
   --header-heading-colour: var(--colour-peppermint);
-
+*/
   /* Body configuration */
+  /*
   --body-default-colour: var(--colour-cello);
   --body-background-colour: var(--colour-peppermint);
 }
-
+*/
 /*
   PAGE / BODY
 */
+/*
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--body-default-colour);
@@ -35,22 +40,124 @@ body {
 
 main {
   min-height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-
-/****** Screen reader text utility clsas *******/
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
+*/
+*{
+  margin: 0;
   padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+  border-color: brown;
+  border-width: 20px;
+}
+.container
+{
+  width: 100%;
+  min-height: 100vh;
+  border-width: 20px;
+  background-color: blanchedalmond;
+  border-color: brown;
+  padding: 10px;
+}
+
+input
+{
+  flex: 1;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: blanchedalmond;
+}
+
+button
+{
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: blanchedalmond;
+}
+
+.todolist-app
+{
+  width: 100%;
+  max-width: 1250px;
+  background-color: brown;
+  margin: 100px auto 20px;
+  padding: 40;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.2);
+}
+
+.todolist-app h2
+{
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+  margin-bottom: 10px;
+  color: blanchedalmond;
+}
+
+.todolist-app h2 img
+{
+  margin-left: 600px;
+}
+
+.row
+{
+  align-items: centre;
+  padding-left: 500px;
+  padding-bottom: 10px;
+}
+
+ul li
+{
+  list-style: none;
+  font-size: 25px;
+  padding-left: 40px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before
+{
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  background-image: url(images/unchecked\ icon.JPG);
+  background-size: contain;
+  background-position: left;
+}
+
+ul li.checked
+{
+  color: burlywood;
+  text-decoration: line-through;
+}
+
+ul li.checked::before
+{
+  background-image: url(images/checked\ icon.JPG);
+}
+
+ul li span
+{
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: blanchedalmond;
+  line-height: 40px;
+  text-align: center;
+}
+
+ul li span:hover
+{
+  background: rgba(255, 235, 205, 0.477);
 }
